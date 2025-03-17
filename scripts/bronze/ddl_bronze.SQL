@@ -8,6 +8,16 @@ Script Purpose:
 ===================================================
 */
 
+CREATE DATABASE DataWarehouse;
+USE DataWarehouse;
+
+CREATE SCHEMA bronze;
+GO
+CREATE SCHEMA silver;
+GO
+CREATE SCHEMA gold;
+GO
+
     IF OBJECT_ID('bronze.crm_cust_info', 'U') IS NOT NULL
     DROP TABLE bronze.crm_cust_info;
     CREATE Table bronze.crm_cust_info (
